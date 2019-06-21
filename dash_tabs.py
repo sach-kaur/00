@@ -17,12 +17,15 @@ mydb = my.connect(
 mycurs = mydb.cursor()
 
 
+win = Tk()
+
+
 class dash():
     filename = ""
 
     def logout(self):
-        destroy()
-        os.system("login_tabs.py")
+        win.destroy()
+        os.system("login_tab.py")
 
     # send messages functions--------------
     def openfile(self):
@@ -443,6 +446,5 @@ class dash():
         self.searchbtn.bind("<Button-1>", self.search)
 
 
-win = Tk()
 root = dash(win)
 win.mainloop()
